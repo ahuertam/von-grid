@@ -25,8 +25,12 @@ vg.Tile = function(config) {
 	this.geometry = settings.geometry;
 	this.material = settings.material;
 	if (!this.material) {
-		this.material = new THREE.MeshPhongMaterial({
-			color: vg.Tools.randomizeRGB('30, 30, 30', 13)
+		var loader = new THREE.TextureLoader();
+		loader.crossOrigin = '';
+		var texture1 = loader.load('../../examples/img/rock1.png');
+		this.material = new THREE.MeshPhysicalMaterial({
+			color: vg.Tools.randomizeRGB('30, 30, 30', 13),
+			map: texture1
 		});
 	}
 

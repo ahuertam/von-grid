@@ -145,6 +145,9 @@ vg.Board.prototype = {
 
 		this.group.add(this.tileGroup);
 	},
+	setNewTexture: function() {
+
+	},
 
 	reset: function() {
 		// removes all tiles from the scene, but leaves the grid intact

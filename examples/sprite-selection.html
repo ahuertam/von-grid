@@ -39,13 +39,11 @@
 		/*var grid = new vg.HexGrid({
 			cellSize: 10
 		});*/
-		var grid = new vg.SqrGrid({
-			cellSize: 10 // size of individual cells
-		});
+		var grid = new vg.HexGrid();
 
-		grid.generate({
-			size: 10 // size of the board
-		});
+			grid.generate({
+				size: 4
+			});
 
 		var mouse = new vg.MouseCaster(scene.container, scene.camera);
 		var selector = new vg.SelectionManager(mouse);
@@ -56,7 +54,7 @@
 		scene.add(board.group);
 		scene.focusOn(board.group);
 
-		// populate the board
+		// populate the board ( UNITS)
 		var i, sprites = [];
 		var spriteConfig = {
 			container: board.group,

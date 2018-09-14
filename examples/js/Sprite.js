@@ -37,6 +37,7 @@ var Sprite = function(settings) {
 		if (!this.url) {
 			console.error('[Sprite] Either provide an image URL, or Threejs Texture');
 		}
+		// THIS IS FOR UNITS
 		this.texture = THREE.ImageUtils.loadTexture(this.url);
 	}
 
@@ -46,6 +47,7 @@ var Sprite = function(settings) {
 			map: this.texture,
 			color: 0xffffff,
 			// color: 0xff0000,
+
 			fog: true
 		});
 	}
