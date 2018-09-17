@@ -11,9 +11,14 @@ define('EditorPlane', function() {
 
 		this.geometry = null;
 		this.mesh = null;
+		var loader = new THREE.TextureLoader();
+		var texture1;
+		loader.load('../../examples/img/rock1.png');
+
 		this.material = new THREE.MeshBasicMaterial({
 			color: 0xffffff,
-			side: THREE.DoubleSide
+			side: THREE.DoubleSide,
+			map: texture1
 		});
 
 		this.scene = scene;
@@ -21,7 +26,8 @@ define('EditorPlane', function() {
 
 		this.hoverMesh = this.grid.generateTilePoly(new THREE.MeshBasicMaterial({
 			color: 0x1aaeff,
-			side: THREE.DoubleSide
+			side: THREE.DoubleSide,
+			map: texture1
 		}));
 
 		this.mouse = mouse;

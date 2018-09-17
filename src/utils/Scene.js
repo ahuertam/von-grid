@@ -47,7 +47,7 @@ vg.Scene = function(sceneConfig, controlConfig) {
 	this.container = new THREE.Scene();
 	this.container.fog = sceneSettings.fog;
 
-	this.container.add(new THREE.AmbientLight(0xede3e3));
+	this.container.add(new THREE.AmbientLight(0x666666));
 	if (!sceneSettings.lightPosition) {
 		sceneSettings.light.position.set(-1, 1, -1).normalize();
 	}

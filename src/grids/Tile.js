@@ -5,6 +5,9 @@
 */
 vg.Tile = function(config) {
 	config = config || {};
+	var loader = new THREE.TextureLoader();
+	loader.crossOrigin = '';
+	var texture1 =	loader.load('../../examples/img/rock1.png');
 	var settings = {
 		cell: null, // required vg.Cell
 		geometry: null, // required threejs geometry
@@ -25,12 +28,9 @@ vg.Tile = function(config) {
 	this.geometry = settings.geometry;
 	this.material = settings.material;
 	if (!this.material) {
-		var loader = new THREE.TextureLoader();
-		loader.crossOrigin = '';
-		var texture1 = loader.load('../../examples/img/rock1.png');
 		this.material = new THREE.MeshPhongMaterial({
-			color: 0xffffff,
-			map: texture1
+			color: 0xc91c30,
+				map: texture1
 		});
 	}
 

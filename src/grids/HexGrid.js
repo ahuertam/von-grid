@@ -217,7 +217,7 @@ vg.HexGrid.prototype = {
 				bevelSize: 0.5,
 				bevelThickness: 0.5
 			}
-		}
+		};
 		settings = vg.Tools.merge(settings, config);
 
 		/*if (!settings.material) {
